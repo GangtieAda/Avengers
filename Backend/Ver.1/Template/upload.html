@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Resume</title>
+</head>
+<body>
+    <h1>Upload Your Resume</h1>
+    <form action="/upload_resume" method="post" enctype="multipart/form-data">
+        <label for="student_id">Student ID:</label>
+        <input type="text" name="student_id" id="student_id" required><br><br>
+
+        <label for="document_type">Document Type:</label>
+        <input type="text" name="document_type" id="document_type" value="Resume"><br><br>
+
+        <label for="ats_score">ATS Score:</label>
+        <input type="number" name="ats_score" id="ats_score" step="0.01" value="0"><br><br>
+
+        <label for="resume">Choose a resume file:</label>
+        <input type="file" name="resume" id="resume" required><br><br>
+
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
