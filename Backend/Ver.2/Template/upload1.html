@@ -1,79 +1,130 @@
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
-            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                <h2 id="heading">Sign Up Your User Account</h2>
-                <p>Fill all form field to go to next step</p>
-                <form id="msform">
-                    <!-- progressbar -->
-                    <ul id="progressbar">
-                        <li class="active" id="account"><strong>Personal Information</strong></li>
-                        <li id="personal"><strong>Academic Background</strong></li>
-                        <li id="payment"><strong>Document Upload</strong></li>
-                        <li id="confirm"><strong>Overview</strong></li>
-                    </ul>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div> <br> <!-- fieldsets -->
-                    <fieldset>
-                        <div class="form-card">
-                            <div class="row">
-                                <div class="col-7">
-                                    <h2 class="fs-title">Personal Information:</h2>
-                                </div>
-                                <div class="col-5">
-                                    <h2 class="steps">Step 1 - 4</h2>
-                                </div>
-                            </div> <label class="fieldlabels">First Name: *</label> <input type="text" name="fname" placeholder="FirstName" /> <label class="fieldlabels">Last Name: *</label> <input type="text" name="lastname" placeholder="LastName" /> <label class="fieldlabels">Institutional Email: *</label> <input type="email" name="email" placeholder="Email" /> <label class="fieldlabels">Personal Email: *</label> <input type="email" name="personal email" placeholder="Personal Email" />
-                        </div> <input type="button" name="next" class="next action-button" value="Next" />
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-card">
-                            <div class="row">
-                                <div class="col-7">
-                                    <h2 class="fs-title">Personal Information:</h2>
-                                </div>
-                                <div class="col-5">
-                                    <h2 class="steps">Step 2 - 4</h2>
-                                </div>
-                            </div> <label class="fieldlabels">Name of Institution: *</label> <input type="text" name="instname" placeholder="Institution Name" /> <label class="fieldlabels">Major: *</label> <input type="text" name="major" placeholder="Major" /> <label class="fieldlabels">Year Of Study: *</label> <input type="number" name="study year" placeholder="Please Select Your Current Year." /> <label class="fieldlabels">Expected Graduation Date.: *</label> <input type="date" name="expected Grad" placeholder="Expected Graduation Date." />
-                        </div> <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-card">
-                            <div class="row">
-                                <div class="col-7">
-                                    <h2 class="fs-title">Documents:</h2>
-                                </div>
-                                <div class="col-5">
-                                    <h2 class="steps">Step 3 - 4</h2>
-                                </div>
-                            </div> <label class="fieldlabels">ATS score:</label> <input type="number" name="ats" placeholder="Please Select Your ATS Score."> <label class="fieldlabels">Upload Your Resume:</label> <input type="file" name="pdf" accept="application/pdf">
-                        </div> <input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-card">
-                            <div class="row">
-                                <div class="col-7">
-                                    <h2 class="fs-title">Finish:</h2>
-                                </div>
-                                <div class="col-5">
-                                    <h2 class="steps">Step 4 - 4</h2>
-                                </div>
-                            </div> <br><br>
-                            <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
-                            <div class="row justify-content-center">
-                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
-                            </div> <br><br>
-                            <div class="row justify-content-center">
-                                <div class="col-7 text-center">
-                                    <h5 class="purple-text text-center">Success! Your Profile Has Been Set Up</h5>
-                                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2 id="heading">Sign Up Your User Account</h2>
+            <p>Fill all form fields to go to the next step</p>
+            <form id="msform">
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="active" id="document"><strong>Document Upload</strong></li>
+                    <li id="account"><strong>Personal Information</strong></li>
+                    <li id="personal"><strong>Academic Background</strong></li>
+                    <li id="confirm"><strong>Overview</strong></li>
+                </ul>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                </div> <br> <!-- fieldsets -->
+                
+                <!-- Document Upload Section -->
+                <fieldset>
+                    <div class="form-card">
+                        <div class="row">
+                            <div class="col-7">
+                                <h2 class="fs-title">Documents:</h2>
+                            </div>
+                            <div class="col-5">
+                                <h2 class="steps">Step 1 - 4</h2>
+                            </div>
+                        </div> 
+                        <label class="fieldlabels">ATS score:</label> 
+                        <input type="number" name="ats" placeholder="Please Select Your ATS Score."> 
+                        <label class="fieldlabels">Upload Your Resume:</label> 
+                        <input type="file" name="pdf" accept="application/pdf">
+                    </div> 
+                    <input type="button" name="next" class="next action-button" value="Next" /> 
+                </fieldset>
+
+                <!-- Personal Information Section -->
+                <fieldset>
+                    <div class="form-card">
+                        <div class="row">
+                            <div class="col-7">
+                                <h2 class="fs-title">Personal Information:</h2>
+                            </div>
+                            <div class="col-5">
+                                <h2 class="steps">Step 2 - 4</h2>
+                            </div>
+                        </div> 
+                        <label class="fieldlabels">First Name: *</label> 
+                        <input type="text" name="fname" placeholder="FirstName" /> 
+                        <label class="fieldlabels">Last Name: *</label> 
+                        <input type="text" name="lastname" placeholder="LastName" /> 
+                        <label class="fieldlabels">Institutional Email: *</label> 
+                        <input type="email" name="email" placeholder="Email" /> 
+                        <label class="fieldlabels">Personal Email: *</label> 
+                        <input type="email" name="personal email" placeholder="Personal Email" />
+                    </div> 
+                    <input type="button" name="next" class="next action-button" value="Next" /> 
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                </fieldset>
+
+                <!-- Academic Background Section -->
+                <fieldset>
+                    <div class="form-card">
+                        <div class="row">
+                            <div class="col-7">
+                                <h2 class="fs-title">Academic Background:</h2>
+                            </div>
+                            <div class="col-5">
+                                <h2 class="steps">Step 3 - 4</h2>
+                            </div>
+                        </div> 
+                        <label class="fieldlabels">Name of Institution: *</label> 
+                        <input type="text" name="instname" placeholder="Institution Name" /> 
+                        <label class="fieldlabels">Major: *</label> 
+                        <input type="text" name="major" placeholder="Major" /> 
+                        <label class="fieldlabels">Year Of Study: *</label> 
+                        <input type="number" name="study year" placeholder="Please Select Your Current Year." /> 
+                        <label class="fieldlabels">Expected Graduation Date.: *</label> 
+                        <input type="date" name="expected Grad" placeholder="Expected Graduation Date." />
+                    </div> 
+                    <input type="button" name="next" class="next action-button" value="Next" /> 
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                </fieldset>
+
+                <!-- Finish Section -->
+                <fieldset>
+                    <div class="form-card">
+                        <div class="row">
+                            <div class="col-7">
+                                <h2 class="fs-title">Finish:</h2>
+                            </div>
+                            <div class="col-5">
+                                <h2 class="steps">Step 4 - 4</h2>
+                            </div>
+                        </div> 
+                        <br><br>
+                        <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> 
+                        <br>
+                        <div class="row justify-content-center">
+                            <div class="col-3"> 
+                                <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> 
+                            </div>
+                        </div> 
+                        <br><br>
+                        <div class="row justify-content-center">
+                            <div class="col-7 text-center">
+                                <h5 class="purple-text text-center">Success! Your Profile Has Been Set Up</h5>
                             </div>
                         </div>
-                    </fieldset>
-                </form>
-            </div>
+                    </div>
+                </fieldset>
+            </form>
         </div>
     </div>
-</div>
+
+    <!-- Include jQuery (required for your JavaScript code) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
